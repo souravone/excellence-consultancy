@@ -1,16 +1,16 @@
 import { Outlet } from "react-router-dom";
-import Navbar from "../components/Navbar";
 import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
 
 function AppLayout() {
   return (
-    <div>
-      {/* <Navbar /> */}
+    <>
       <Navigation />
       <main>
         <Outlet />
       </main>
-    </div>
+      <Footer />
+    </>
   );
 }
 
