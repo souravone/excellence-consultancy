@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
   FaCertificate,
+  FaRegListAlt,
   FaChalkboardTeacher,
   FaIndustry,
   FaFlask,
@@ -22,32 +23,46 @@ import {
   FaAppleAlt,
   FaCheese,
   FaTint,
+  FaBook,
+  FaBalanceScale,
 } from "react-icons/fa";
 
 const services = [
   {
     title: "System Certification Consultancy",
     description:
-      "We offer consultancy services for various certifications like ISO, BRCGS, FSSC, and more to ensure your organization meets international standards.",
+      "Expert consultancy services to help businesses achieve certifications like ISO, BRCGS, FSSC, and more, ensuring compliance with international quality and safety standards.",
     icon: <FaCertificate size={40} className="text-blue-500" />,
   },
   {
     title: "Vendor Audits",
     description:
-      "Comprehensive vendor audits to ensure quality and compliance throughout your value chain.",
-    icon: <FaChalkboardTeacher size={40} className="text-green-500" />,
+      "Comprehensive vendor audit services to evaluate and enhance supplier quality and compliance throughout your supply chain.",
+    icon: <FaRegListAlt size={40} className="text-green-500" />,
   },
   {
     title: "Project Setup",
     description:
-      "Consultancy services for setting up food factories, packaging facilities, and more.",
+      "Consultancy for setting up food factories, packaging facilities, and more, ensuring a seamless transition from concept to operation.",
     icon: <FaIndustry size={40} className="text-orange-500" />,
   },
   {
     title: "R&D of Food Products",
     description:
-      "Research and Development of food products including sweets, pickles, etc.",
+      "Innovative research and development services for food products, including sweets, pickles, and more, tailored to market needs.",
     icon: <FaFlask size={40} className="text-red-500" />,
+  },
+  {
+    title: "Training",
+    description:
+      "Specialized training programs on system certification standards, from HACCP to BRCGS, designed to empower your team with essential knowledge and skills.",
+    icon: <FaBook size={40} className="text-purple-500" />,
+  },
+  {
+    title: "Legal Compliance",
+    description:
+      "Expert guidance on FSSAI regulatory requirements, labeling norms, and other legal compliances to keep your business fully compliant.",
+    icon: <FaBalanceScale size={40} className="text-teal-500" />,
   },
 ];
 
@@ -198,7 +213,7 @@ function Services() {
           </motion.div>
 
           {/* Service Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <motion.div
                 key={index}
@@ -353,45 +368,50 @@ function Services() {
         </div>
       </section>
       {/* Section - CTA */}
-      <section className="bg-gray-800 py-8">
-        <div className="container mx-auto px-5 md:px-8 lg:px-10 text-center">
+      <section className="bg-gray-800 py-12 px-5 md:px-8 lg:px-10 ">
+        <div className="container mx-auto">
           {/* CTA Heading */}
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-3xl md:text-4xl font-bold text-white mb-6"
+            className="text-2xl md:text-3xl font-bold text-white mb-4"
           >
-            Ready to Elevate Your Business with Our Expertise?
+            Ready to Elevate Your Business?
           </motion.h2>
 
-          {/* CTA Subheading */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg text-white mb-8"
-          >
-            Connect with us today to get started on your journey to
-            certification and business growth.
-          </motion.p>
-
-          {/* CTA Button */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: 0.4 }}
-          >
-            <Link
-              to="/contact"
-              className="bg-accent hover:bg-accenthover text-white font-bold py-2 px-4 md:py-3 md:px-6 rounded transition-all duration-300"
+          {/* CTA Paragraph */}
+          <div className="flex flex-col md:flex-row gap-8 items-center">
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-lg md:text-xl text-white"
             >
-              Contact Us
-            </Link>
-          </motion.div>
+              Whether you’re looking to achieve certification, improve your
+              processes, or start a new project, our team is here to guide you
+              every step of the way. Reach out to us today to discuss how we can
+              help you succeed.
+            </motion.p>
+
+            {/* CTA Button */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.2 }}
+              className="whitespace-nowrap"
+            >
+              <Link
+                to="/contact"
+                className="bg-accent hover:bg-accenthover text-white font-bold py-2 px-4 md:py-3 md:px-6 rounded transition-all duration-300"
+              >
+                Get in Touch
+              </Link>
+            </motion.div>
+          </div>
         </div>
       </section>
     </>

@@ -42,7 +42,7 @@ function Homepage() {
           >
             <img
               className="h-40 md:h-auto"
-              src="src\assets\illustrations\undraw_visionary_technology_re_jfp7.svg"
+              src="src\assets\illustrations\hero.svg"
               alt="Certification Illustration"
             />
           </motion.div>
@@ -189,7 +189,9 @@ function Homepage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
               >
-                <h3 className="text-xl font-semibold mb-4">{point.title}</h3>
+                <h3 className="text-xl font-semibold mb-4 text-accent">
+                  {point.title}
+                </h3>
                 <p>{point.description}</p>
               </motion.div>
             ))}
@@ -197,33 +199,50 @@ function Homepage() {
         </div>
       </section>
       {/* Section: CTA */}
-      <section className="bg-gray-800 py-8">
-        <div className="container mx-auto px-5 md:px-8 lg:px-10 text-center flex flex-col md:flex-row gap-6 md:gap-8 md:items-center md:justify-center">
+      <section className="bg-gray-800 py-12 px-5 md:px-8 lg:px-10 ">
+        <div className="container mx-auto">
           {/* CTA Heading */}
-          <motion.div
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-2xl md:text-3xl font-bold text-white"
+            className="text-2xl md:text-3xl font-bold text-white mb-4"
           >
-            Want to Get Started?
-          </motion.div>
+            Ready to Elevate Your Business?
+          </motion.h2>
 
-          {/* CTA Button */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: 0.2 }}
-          >
-            <Link
-              to="/contact"
-              className="bg-accent hover:bg-accenthover text-white font-bold py-2 px-4 md:py-3 md:px-6 rounded transition-all duration-300"
+          {/* CTA Paragraph */}
+          <div className="flex flex-col md:flex-row gap-8 items-center">
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-lg md:text-xl text-white"
             >
-              Get in Touch
-            </Link>
-          </motion.div>
+              Whether you’re looking to achieve certification, improve your
+              processes, or start a new project, our team is here to guide you
+              every step of the way. Reach out to us today to discuss how we can
+              help you succeed.
+            </motion.p>
+
+            {/* CTA Button */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.2 }}
+              className="whitespace-nowrap"
+            >
+              <Link
+                to="/contact"
+                className="bg-accent hover:bg-accenthover text-white font-bold py-2 px-4 md:py-3 md:px-6 rounded transition-all duration-300"
+              >
+                Get in Touch
+              </Link>
+            </motion.div>
+          </div>
         </div>
       </section>
     </>
