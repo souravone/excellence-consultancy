@@ -346,7 +346,7 @@ function Services() {
           </motion.div>
 
           {/* Industries Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-8">
             {industries.map((industry, index) => (
               <motion.div
                 key={index}
@@ -359,7 +359,7 @@ function Services() {
                 {/* Icon */}
                 <div className="mb-4">{industry.icon}</div>
                 {/* Title */}
-                <h3 className="text-xl font-semibold text-gray-800">
+                <h3 className="text-lg md:text-xl font-semibold text-gray-800">
                   {industry.title}
                 </h3>
               </motion.div>

@@ -1,7 +1,12 @@
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
+
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import L from "leaflet";
 import "leaflet/dist/leaflet.css";
+import markerIcon from "leaflet/dist/images/marker-icon.png";
+import markerShadow from "leaflet/dist/images/marker-shadow.png";
+
 import {
   FaMapMarkerAlt,
   FaPhoneAlt,
@@ -10,6 +15,15 @@ import {
 } from "react-icons/fa";
 
 import { motion } from "framer-motion";
+
+const customMarkerIcon = new L.Icon({
+  iconUrl: markerIcon,
+  shadowUrl: markerShadow,
+  iconSize: [25, 41], // default size for Leaflet
+  iconAnchor: [12, 41], // default anchor point for the icon
+  popupAnchor: [1, -34], // where the popup should open relative to the iconAnchor
+  shadowSize: [41, 41], // size of the shadow
+});
 
 function Contact() {
   const form = useRef();
@@ -130,10 +144,8 @@ function Contact() {
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             />
-            <Marker position={[22.5969474, 88.3674524]}>
-              <Popup>
-                Excellence Consultancy Services <br /> Kolkata 700004
-              </Popup>
+            <Marker position={[22.5969474, 88.3674524]} icon={customMarkerIcon}>
+              <Popup>Excellence Consultancy Services</Popup>
             </Marker>
           </MapContainer>
         </div>
