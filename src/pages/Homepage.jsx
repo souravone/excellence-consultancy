@@ -42,7 +42,7 @@ function Homepage() {
           >
             <img
               className="h-40 md:h-auto"
-              src="src\assets\illustrations\hero.svg"
+              src="\assets\illustrations\hero.svg"
               alt="Certification Illustration"
             />
           </motion.div>

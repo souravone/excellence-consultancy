@@ -65,7 +65,7 @@ function Contact() {
         >
           <img
             className="h-40 md:h-auto"
-            src="src\assets\illustrations\contact_us.svg"
+            src="\assets\illustrations\contact_us.svg"
             alt="Certification Illustration"
           />
         </motion.div>

@@ -1,20 +1,33 @@
 export const stats = [
-  { end: 100, label: "Clients Worked With", suffix: "+" },
-  { end: 10, label: "Certification Bodies", prefix: ">" },
-  { end: 20, label: "Types of Certification Standards", suffix: "+" },
+  { end: 110, label: "Clients Worked With", suffix: "+" },
+  { end: 15, label: "Certification Bodies Worked With", prefix: ">" },
+  {
+    end: 20,
+    label: "Types of Certification Standards Worked With",
+    suffix: "+",
+  },
 ];
 
 export const companies = [
-  { name: "Parle Biscuits Pvt. Ltd.", logo: "src/assets/Logo/logo-parle.png" },
-  { name: "Parle Biscuits Pvt. Ltd.", logo: "src/assets/Logo/logo-newby.png" },
-  { name: "Parle Biscuits Pvt. Ltd.", logo: "src/assets/Logo/logo-pran.png" },
   {
     name: "Parle Biscuits Pvt. Ltd.",
-    logo: "src/assets/Logo/logo-tamicon.png",
+    logo: "/assets/Logo/logo-parle.png",
   },
   {
     name: "Parle Biscuits Pvt. Ltd.",
-    logo: "src/assets/Logo/logo-pitambara.png",
+    logo: "/assets/Logo/logo-newby.png",
+  },
+  {
+    name: "Parle Biscuits Pvt. Ltd.",
+    logo: "/assets/Logo/logo-pran.png",
+  },
+  {
+    name: "Parle Biscuits Pvt. Ltd.",
+    logo: "/assets/Logo/logo-tamicon.png",
+  },
+  {
+    name: "Parle Biscuits Pvt. Ltd.",
+    logo: "/assets/Logo/logo-pitambara.png",
   },
 ];
 
@@ -72,9 +85,9 @@ export const introduction = {
     "Excellence Consultancy Services combines deep industry knowledge with a practical approach, focusing on tailored solutions that cater to each client’s specific needs. Our consultants are highly experienced professionals with extensive expertise in the food industry and beyond, making us the go-to partner for achieving compliance and excellence.",
 };
 
-import teamMember1 from "../assets/team/photo-arindam.png"; // Replace with actual paths to images
-import teamMember2 from "../assets/team/photo-debayan.png";
-import teamMember3 from "../assets/team/photo-sourav.png";
+import teamMember1 from "/assets/team/photo-arindam.png"; // Replace with actual paths to images
+import teamMember2 from "/assets/team/photo-debayan.png";
+import teamMember3 from "/assets/team/photo-sourav.png";
 
 export const teamMembers = [
   {
