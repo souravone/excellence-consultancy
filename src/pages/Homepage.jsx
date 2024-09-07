@@ -21,10 +21,10 @@ function Homepage() {
               Empowering Food Industries with World-Class Certifications
             </h1>
             <p className="text-sm sm:text-lg md:text-xl text-center md:text-left">
-              Specializing in ISO, BRC, and FSSC certifications, we help your
-              business meet the highest standards. We are committed to guiding
-              you through the complexities of food safety and quality
-              certifications.
+              Specializing in a wide range of certifications, including ISO,
+              BRC, FSSC, ASC Farm, ASC COC, SMETA 2/4 Pillar, and SA 8000, we
+              help your business meet the highest standards of food safety and
+              quality.
             </p>
             <Link
               to="/contact"
